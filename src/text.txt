@@ -1,0 +1,16 @@
+ {
+                  data.map((item) => {
+                      const { id, title, info} = item
+                      return(
+                          <div key={id} >
+                              <div className='title-container'>
+                                  <h2 className='title'>{title}</h2>
+                                  <div className='btn-container' onClick={() => setToggle(!toggle)}>
+                                {toggle ? <div className='icon'>-</div> :  <div className='icon'>+</div>}
+                                </div>
+                              </div>
+                              <p className='text'>{toggle && info}</p>
+                          </div>
+                      )
+                  })  
+                }
